@@ -22,6 +22,7 @@ export const AddUser = (props) => {
       console.log('invalid input');
       return
     }
+    props.onAddUser({name: enteredUsername.trim(), age: enteredAge});
     console.log(enteredUsername.trim(),enteredAge);
     setEnteredAge('');
     setEnteredUsername('');
@@ -52,3 +53,4 @@ export const AddUser = (props) => {
     </Card>
   );
 };
+export default AddUser; 
