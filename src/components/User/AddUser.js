@@ -49,7 +49,7 @@ export const AddUser = (props) => {
   }
 
   return (
-    <div>
+    <>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
       <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
@@ -72,7 +72,7 @@ export const AddUser = (props) => {
           <Button onClick={addUserHandler}>Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   );
 };
 export default AddUser;
